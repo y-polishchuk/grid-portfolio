@@ -47,6 +47,10 @@ body {
   display: none;
 }
 
+.mobileNav {
+  display: none;
+}
+
 .bar1, .bar2, .bar3 {
   background-color: black;
   height: 4px;
@@ -186,6 +190,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .navbar .hamburger:hover {
     cursor: pointer;
   }
 
@@ -200,13 +207,18 @@ body {
     position: fixed;
     z-index: 2;
     top: 0;
-    right: 0;
+    right: -160px;
     padding: 16px;
+    transition: transform 0.3s;
   }
 
   .mobileNav img {
     width: 24px;
     height: 24px;
+  }
+
+  .openDrawer {
+    transform: translateX(-160px);
   }
 
   .mobileNav a {
@@ -244,17 +256,17 @@ body {
 }
 
 .animateBar1 {
-  animation: flipBar1 1s;
+  animation: flipBar1 0.5s;
   animation-fill-mode: forwards;
 }
 
 .animateBar2 {
-  animation: fadeBar2 1s;
+  animation: fadeBar2 0.5s;
   animation-fill-mode: forwards;
 }
 
 .animateBar3 {
-  animation: flipBar3 1s;
+  animation: flipBar3 0.5s;
   animation-fill-mode: forwards;
 }
 
